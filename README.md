@@ -1,4 +1,4 @@
-# jc3mp-guipm
+# jc3mp-warpgui
 Simple GUI to warp to other players.
 
 ## Installation

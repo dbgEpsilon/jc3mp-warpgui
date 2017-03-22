@@ -13,8 +13,6 @@ $(document).ready(function()
 
     $('.players').empty();
 
-    // Put 1 second cooldown on warp requests
-
     if (!open)
     {
         $('.window').fadeOut(1, function() {$('.window').css('visibility', 'hidden');});

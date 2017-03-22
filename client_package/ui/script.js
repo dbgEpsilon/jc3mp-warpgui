@@ -49,6 +49,8 @@ $(document).ready(function()
             $('#networkId_' + id).append(warphere);
         }
         
+        Sort();
+        
     }
 
     function RemovePlayer(id)
@@ -58,6 +60,16 @@ $(document).ready(function()
         {
             entry.remove(); // If it exists, remove it
         }
+    }
+
+    function Sort()
+    {
+        let $divs = $("div.player-entry");
+        const sorted = $divs.sort(function(a,b)
+        {
+            return ($(a).find("span.player-name").text() > $(b).find("span.player-name").text() ? 1 : -1);
+        });
+        $(".players").html(sorted);
     }
 
     // .click does not work for dynamically generated elements, use .on

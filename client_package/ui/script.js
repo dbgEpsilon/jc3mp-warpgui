@@ -145,7 +145,7 @@ $(document).ready(function()
             let accept = document.createElement("span");
             accept.textContent = acceptWarp;
             accept.className = "warp";
-            accept.id = "networkIdwarp_" + id;
+            accept.id = "networkIdaccept_" + id;
             $('#networkId_' + id).append(accept);
         }
         

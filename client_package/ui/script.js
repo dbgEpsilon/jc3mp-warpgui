@@ -76,21 +76,27 @@ $(document).ready(function()
     $(".players").on("click", ".warp", function()
     {
         const text = $(this).text();
-        let id = $(this).attr('id')
-        id = id.replace('networkIdwarp_', '');
-        id = parseInt(id);
 
         if (text == acceptWarp) // Clicked accept warp button
         {
+            let id = $(this).attr('id')
+            id = id.replace('networkIdaccept_', '');
+            id = parseInt(id);
             jcmp.CallEvent('warpgui/AcceptWarp', id);
             $(this).remove();
         }
         else if (text == warpHere && admin) // Clicked warp here button
         {
+            let id = $(this).attr('id')
+            id = id.replace('networkIdwarp_', '');
+            id = parseInt(id);
             jcmp.CallEvent('warpgui/WarpHere', id);
         }
         else if (text == warpTo) // Clicked warp to button
         {
+            let id = $(this).attr('id')
+            id = id.replace('networkIdwarp_', '');
+            id = parseInt(id);
             jcmp.CallEvent('warpgui/WarpTo', id);
         }
     })

@@ -16,8 +16,8 @@ jcmp.events.AddRemoteCallable('warpgui/AcceptWarp', (player, id) => {
         return;
     }
     target.position = player.position;
-    chat.send(target, m_c + "[Warp] " + target.name + " warped to you.");
-    chat.send(player, m_c + "[Warp] You warped to " + player.name + " successfully.");
+    chat.send(player, m_c + "[Warp] " + target.name + " warped to you.");
+    chat.send(target, m_c + "[Warp] You warped to " + player.name + " successfully.");
 })
 
 jcmp.events.AddRemoteCallable('warpgui/WarpHere', (player, id) => {
@@ -35,7 +35,7 @@ jcmp.events.AddRemoteCallable('warpgui/WarpHere', (player, id) => {
         return;
     }
     target.position = player.position;
-    chat.send(player, m_c + "[Warp] You warped " + player.name + " to you successfully.");
+    chat.send(player, m_c + "[Warp] You warped " + target.name + " to you successfully.");
 })
 
 jcmp.events.AddRemoteCallable('warpgui/WarpTo', (player, id) => {

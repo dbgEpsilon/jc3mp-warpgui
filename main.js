@@ -35,7 +35,7 @@ jcmp.events.AddRemoteCallable('warpgui/WarpHere', (player, id) => {
         return;
     }
     target.position = player.position;
-    chat.send(player, m_c + "[Warp] You warped " + target.name + " to you successfully.");
+    chat.send(target, m_c + "[Warp] " + player.name + " warped you to their location.");
 })
 
 jcmp.events.AddRemoteCallable('warpgui/WarpTo', (player, id) => {

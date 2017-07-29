@@ -97,6 +97,10 @@ $(document).ready(function()
             let id = $(this).attr('id')
             id = id.replace('networkIdwarp_', '');
             id = parseInt(id);
+		    open = !open;
+		    $('.window').fadeOut("fast", function() {$('.window').css('visibility', 'hidden'); $("#close-button").css("color", "black");});
+		    jcmp.HideCursor();
+		    jcmp.CallEvent('warpgui/ToggleOpen', true);
             jcmp.CallEvent('warpgui/WarpTo', id);
         }
     })

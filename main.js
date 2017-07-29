@@ -46,17 +46,8 @@ jcmp.events.AddRemoteCallable('warpgui/WarpTo', (player, id) => {
         chat.send(player, m_c + "[Warp] Warp to player failed! No valid player was found.");
         return;
     }
-    if (is_admin(player))
-    {
-        player.position = target.position;
-        chat.send(player, m_c + "[Warp] You warped to " + target.name + " successfully.");
-    }
-    else
-    {
-        jcmp.events.CallRemote('warpgui/AddAcceptWarp', target, player.networkId);
-        chat.send(player, m_c + "[Warp] Waiting for " + target.name + " to accept warp request...");
-        chat.send(target, m_c + "[Warp] " + player.name + " has requested to warp to you. Open the Warp menu with F9 to accept.");
-    }
+    player.position = target.position;
+    chat.send(player, m_c + "[Warp] You warped to " + target.name + " successfully.");
 })
 
 jcmp.events.AddRemoteCallable('warpgui/GUIReady', (player) => 
